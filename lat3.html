@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lat 3 Dasar Vue.Js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <input type="text" placeholder="Masukkan nama Anda" v-model="namaSaya">
+            <br>
+            <label>Nama saya adalah: {{namaSaya}}</label>
+        </form>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                namaSaya: '',
+            },  
+        });
+    </script>
+</body>
+</html>

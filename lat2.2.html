@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lat 2.2 Dasar Vue.Js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <img v-bind:src="url" alt="Logo VueJs" v-bind:style="logo_vue_size" />
+      <!-- BISA UNTUK STYLE JUGA TERNYATA -->
+      <br />
+      Kunjungi website resmi SMK Telkom Malang dengan klik
+      <a v-bind:href="web_sekolah">disini</a> <br />
+      atau juga bisa dengan meng-klik logo SMK Telkom Malang berikut:
+      <a v-bind:href="web_sekolah"
+        ><br />
+        <img
+          v-bind:src="logo_sekolah"
+          alt="Logo SMK Telkom Malang"
+          v-bind:style="logo_sekolah_size"
+        />
+      </a>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          url: "https://fullstackpython.com/img/logos/vuejs-wide.png",
+          web_sekolah: "https://smktelkom-mlg.sch.id/", //ternyata property nya (web_sekolah) bisa ditulis tanpa tanda petik ("")
+          logo_sekolah:
+            "data:image/png;base64,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",
+          logo_vue_size: "width: 300px;",
+          logo_sekolah_size: "width: 150px;",
+        },
+      });
+    </script>
+  </body>
+</html>

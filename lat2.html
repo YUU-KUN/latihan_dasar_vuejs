@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lat 2 Dasar Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>
+        <p>{{greet('Indra')}}</p>
+      </h1>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        methods: {
+          greet: function (nama) {
+            return "Selamat Pagi, " + nama;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

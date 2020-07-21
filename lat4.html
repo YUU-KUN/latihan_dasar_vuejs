@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lat 4 Dasar Vue.Js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" placeholder="Jumlah item" v-model="itemInStock" />
+      <p v-if="itemInStock > 10">Masih banyak! {{itemInStock}} item tersedia</p>
+      <p v-else-if="itemInStock > 0">
+        Buruan! Hanya tersisa {{itemInStock}} item lagi lho!
+      </p>
+      <!-- <p v-else-if="itemInStock = 0">
+        Yah, itemnya sudah habis nih~
+      </p>
+      <p v-else>Masukkan jumlah item di kotak di atas ya~</p> -->
+      <p v-else>Yah, itemnya sudah habis nih~</p>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          itemInStock: '',
+        },
+      });
+    </script>
+  </body>
+</html>
